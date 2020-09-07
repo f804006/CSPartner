@@ -1,0 +1,60 @@
+<view class="cu-bar bg-white solid-bottom margin-top">
+  <view class="action">
+    <text class="cuIcon-title text-green "></text>{{ pageinfo.title }} 笔记
+  </view>
+  <view class="action">
+    <button class="cu-btn bg-green shadow" bindtap='add' style="width:200rpx">添加</button>
+  </view>
+</view>
+
+<view class="grid col-1 padding-sm">
+  <view class="padding-sm" wx:for="{{ List }}" wx:key>
+    <view class="bg-olive  padding radius text-center shadow-blur animation-fade" bindtap="todetail" data-id="{{ item._id }}" data-class="slide-tops">
+      <view class="text-s">{{ item.content}}</view>
+      <!-- <view class="margin-top-sm text-Abc">#ff9700 - #ed1c24</view> -->
+    </view>
+  </view>
+</view>
+
+<view class="cu-bar bg-white solid-bottom margin-top">
+  <view class="action">
+    <text class="cuIcon-title text-green "></text>{{ pageinfo.title }} 题集
+  </view>
+  <view class="action">
+    <button class="cu-btn bg-green shadow" bindtap='showModal' style="width:200rpx" data-target="modal1">添加章节</button>
+  </view>
+</view>
+
+<view class="cu-modal {{modalName=='modal1'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">添加新章节</view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-red"></text>
+      </view>
+    </view>
+    <view style="height:2rpx;background-color: 	#D3D3D3;"></view>
+    <view class='item'>
+      <view class='name'> 标题:</view>
+      <view class='detail'>
+        <input class='input-style-name' placeholder="新章节标题" type='text' maxlength='8' style="color:grey" bindblur="newSection"></input>
+      </view>
+    </view>
+    <view style="height:2rpx;background-color: 	#D3D3D3;"></view>
+    <view class="cu-bar bg-white justify-end">
+      <view class="action">
+        <button class="cu-btn bg-green margin-left" bindtap="addSection" style="width:200rpx">确认添加</button>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="grid col-2 padding-sm">
+  <view class="padding-sm" wx:for="{{ QuestionList }}" wx:key  >
+    <view class="bg-olive padding radius text-center shadow-blur" bindtap="toQuestion" 
+    data-id="{{ item._id }}" data-title="{{item.title}}">
+      <view class="text-lg">{{item.title}}</view>
+      <!-- <view class="margin-top-sm text-Abc">{{item.name}}</view> -->
+    </view>
+  </view>
+</view> 

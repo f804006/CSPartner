@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "like-fx": "/components/likeFx/likeFx"
+  },
+  "navigationBarBackgroundColor": "#F0F8FF",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "注意"
+}

@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="cs研伴,计算机考研,软件工程考研"/>
+    <meta name="author" content="栗山"/>
+    <meta name="description" content="本站是“CS研伴”微信小程序的院校信息查询功能模块。本站不涉及商业利益，为个人开发，并非考研机构。开发本站的目的是希望广大有意cs/se考研的同学能够有一个便捷信息获取渠道，当然这也包括我自己在内，如果有什么疑问欢迎添加微信与我联系">
+    <title>CS研伴_院校信息</title>
+    <link rel="icon" href="favicon.ico" type="img/x-ico" />
+    <!--FACSS图标-->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/occult_main.css" rel="stylesheet">
+    <link href="../assets/css/occult_components.css" rel="stylesheet">
+    <link href="../assets/css/occult_surface.css" rel="stylesheet">
+    <link href="../assets/css/nav.css" rel="stylesheet">
+    
+    <script src="../assets/js/jquery-1.11.1.min.js"></script>
+    <script src="../assets/js/axios.min.js"></script>
+    <script src="../assets/js/vue.js"></script>
+
+</head>
+
+<body class="page-body">
+    <!-- skin-white -->
+    <div class="page-container" id="app">
+        <div class="sidebar-menu toggle-others fixed">
+            <div class="sidebar-menu-inner">
+                <header class="logo-env">
+                    <div class="mobile-menu-toggle visible-xs">
+                        <a href="#" data-toggle="mobile-menu">
+                            <i class="fa-align-justify"></i>
+                        </a>
+                    </div>
+                    <div class="logo">
+                        <a href="CSPMain.html" class="logo-expanded">
+                            <img src="../assets/images/网站logo.png" width="100%" alt="" />
+                        </a>
+                        <a href="CSPMain.html" class="logo-collapsed">
+                            <img src="../assets/images/网站logo.png" width="500" alt="" />
+                        </a>
+                    </div>
+                </header>
+                <ul id="main-menu" class="main-menu">
+
+                            <!--<a v-for="item in province" :href="[item.href]" class="smooth" >-->
+                            <!--    <i class="fa-heart" ></i>-->
+                            <!--    <span class="title" style="font-weight: bold;">{{item.name}}</span>-->
+                            <!--</a>-->
+                            <!--2020.04.30 BUG VUE渲染之后锚点失效-->
+                            <a href="#北京" class="smooth" >
+                                <i class="fa-diamond" ></i>
+                                <span class="title" style="font-weight: bold;">北京</span>
+                            </a>
+                            <a href="#上海" class="smooth" >
+                                <i class="fa-diamond" ></i>
+                                <span class="title" style="font-weight: bold;">上海</span>
+                            </a>
+                            <a href="#江苏" class="smooth" >
+                                <i class="fa-diamond" ></i>
+                                <span class="title" style="font-weight: bold;">江苏</span>
+                            </a>
+                            <a href="#湖北" class="smooth" >
+                                <i class="fa-diamond" ></i>
+                                <span class="title" style="font-weight: bold;">湖北</span>
+                            </a>
+                            <a href="#广东" class="smooth" >
+                                <i class="fa-diamond" ></i>
+                                <span class="title" style="font-weight: bold;">广东</span>
+                            </a>
+                            <a href="#浙江" class="smooth" >
+                                <i class="fa-diamond" ></i>
+                                <span class="title" style="font-weight: bold;">浙江</span>
+                            </a>
+                            <a href="#湖南" class="smooth" >
+                                <i class="fa-diamond" ></i>
+                                <span class="title" style="font-weight: bold;">湖南</span>
+                            </a>
+                            <a href="#河南" class="smooth" >
+                                <i class="fa-diamond" ></i>
+                                <span class="title" style="font-weight: bold;">河南</span>
+                            </a>
+                            <a href="#山东" class="smooth" >
+                                <i class="fa-diamond" ></i>
+                                <span class="title" style="font-weight: bold;">山东</span>
+                            </a>
+                            <a href="#C9" class="smooth" >
+                                <i class="fa-diamond" ></i>
+                                <span class="title" style="font-weight: bold;">C9</span>
+                            </a>
+                            <a href="#CSA" class="smooth" >
+                                <i class="fa-diamond" ></i>
+                                <span class="title" style="font-weight: bold;">计算机A类</span>
+                            </a>
+                            <a href="#SEA" class="smooth" >
+                                <i class="fa-diamond" ></i>
+                                <span class="title" style="font-weight: bold;">软工A类</span>
+                            </a>
+                            <a href="#985" class="smooth" >
+                                <i class="fa-diamond" ></i>
+                                <span class="title" style="font-weight: bold;">985</span>
+                            </a>
+                            <a href="#热门双非" class="smooth" >
+                                <i class="fa-diamond" ></i>
+                                <span class="title" style="font-weight: bold;">热门双非</span>
+                            </a>
+                    <div class="submit-tag">
+                        <a href="about.html" class="smooth">
+                        	<!--linecons-heart-->
+                            <i class="fa-heart" aria-hidden="true"></i>
+                            <span class="tooltip-blue" style="font-weight: bold;">关于本站</span>
+             
+                        </a>
+                    </div>
+                  
+                </ul>
+            </div>
+        </div>
+        
+  
+
+        <div class="main-content">
+            <!-- 北京 linecons-tag-->
+            <h4 class="text-gray"><i class="fa-star fa-spin" style="margin-right: 7px; color:red" id="北京"></i>北京</h4>
+            <div class="row">
+                <div v-for="item in university_bj">
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="xe-widget xe-conversations box2 label-info" :onclick="[item.open_src]"
+                            data-toggle="tooltip" data-placement="bottom" title="" :data-original-title="[item.name]">
+                            <div class="xe-comment-entry">
+                                <a class="xe-user-img">
+                                    <img :src="[item.img_src]" class="lozad img-circle" width="40">
+                                </a>
+                                <div class="xe-comment">
+                                    <a href="#" class="xe-user-name overflowClip_1">
+                                        <strong>{{ item.name }}</strong>
+                                    </a>
+                                    <p class="overflowClip_2">{{ item.department }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br />
+            <!--END 北京 -->
+            <!-- 上海 -->
+            <h4 class="text-gray"><i class="fa-star" style="margin-right: 7px;color:red" id="上海"></i>上海</h4>
+            <div class="row">
+                <div v-for="item in university_sh">
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="xe-widget xe-conversations box2 label-info" :onclick="[item.open_src]"
+                            data-toggle="tooltip" data-placement="bottom" title="" :data-original-title="[item.name]">
+                            <div class="xe-comment-entry">
+                                <a class="xe-user-img">
+                                    <img :src="[item.img_src]" class="lozad img-circle" width="40">
+                                </a>
+                                <div class="xe-comment">
+                                    <a href="#" class="xe-user-name overflowClip_1">
+                                        <strong>{{ item.name }}</strong>
+                                    </a>
+                                    <p class="overflowClip_2">{{ item.department }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br />
+            <!--END 上海 -->
+            <!-- 江苏 -->
+            <h4 class="text-gray"><i class="fa-star " style="margin-right: 7px;color:red" id="江苏"></i>江苏</h4>
+            <div class="row">
+                <div v-for="item in university_js">
+                    <div class="col-sm-3 col-xs-6" >
+                        <div class="xe-widget xe-conversations box2 label-info" :onclick="[item.open_src]"
+                            data-toggle="tooltip" data-placement="bottom" title="" :data-original-title="[item.name]">
+                            <div class="xe-comment-entry">
+                                <a class="xe-user-img">
+                                    <img :src="[item.img_src]" class="lozad img-circle" width="40">
+                                </a>
+                                <div class="xe-comment">
+                                    <a href="#" class="xe-user-name overflowClip_1">
+                                        <strong>{{ item.name }}</strong>
+                                    </a>
+                                    <p class="overflowClip_2">{{ item.department }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <!--END 江苏 -->
+            <!-- 湖北 -->
+            <h4 class="text-gray"><i class="fa-star " style="margin-right: 7px;color:red" id="湖北"></i>湖北</h4>
+            <div class="row">
+                <div v-for="item in university_hb">
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="xe-widget xe-conversations box2 label-info" :onclick="[item.open_src]"
+                            data-toggle="tooltip" data-placement="bottom" title="" :data-original-title="[item.name]">
+                            <div class="xe-comment-entry">
+                                <a class="xe-user-img">
+                                    <img :src="[item.img_src]" class="lozad img-circle" width="40">
+                                </a>
+                                <div class="xe-comment">
+                                    <a href="#" class="xe-user-name overflowClip_1">
+                                        <strong>{{ item.name }}</strong>
+                                    </a>
+                                    <p class="overflowClip_2">{{ item.department }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br />
+            <!-- END 湖北 -->
+
+
+            <!-- 广东 -->
+            <h4 class="text-gray"><i class="fa-star " style="margin-right: 7px;color:red" id="广东"></i>广东</h4>
+            <div class="row">
+                <div v-for="item in university_gd">
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="xe-widget xe-conversations box2 label-info" :onclick="[item.open_src]"
+                            data-toggle="tooltip" data-placement="bottom" title="" :data-original-title="[item.name]">
+                            <div class="xe-comment-entry">
+                                <a class="xe-user-img">
+                                    <img :src="[item.img_src]" class="lozad img-circle" width="40">
+                                </a>
+                                <div class="xe-comment">
+                                    <a href="#" class="xe-user-name overflowClip_1">
+                                        <strong>{{ item.name }}</strong>
+                                    </a>
+                                    <p class="overflowClip_2">{{ item.department }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--END 广东 -->
+            <br />
+            
+            
+            <h4 class="text-gray"><i class="fa-star " style="margin-right: 7px;color:red" id="浙江"></i>浙江</h4>
+            <div class="row">
+                <div v-for="item in university_zj">
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="xe-widget xe-conversations box2 label-info" :onclick="[item.open_src]"
+                            data-toggle="tooltip" data-placement="bottom" title="" :data-original-title="[item.name]">
+                            <div class="xe-comment-entry">
+                                <a class="xe-user-img">
+                                    <img :src="[item.img_src]" class="lozad img-circle" width="40">
+                                </a>
+                                <div class="xe-comment">
+                                    <a href="#" class="xe-user-name overflowClip_1">
+                                        <strong>{{ item.name }}</strong>
+                                    </a>
+                                    <p class="overflowClip_2">{{ item.department }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+            <br />
+            
+            <h4 class="text-gray"><i class="fa-star " style="margin-right: 7px;color:red" id="湖南"></i>湖南</h4>
+            <div class="row">
+                <div v-for="item in university_hun">
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="xe-widget xe-conversations box2 label-info" :onclick="[item.open_src]"
+                            data-toggle="tooltip" data-placement="bottom" title="" :data-original-title="[item.name]">
+                            <div class="xe-comment-entry">
+                                <a class="xe-user-img">
+                                    <img :src="[item.img_src]" class="lozad img-circle" width="40">
+                                </a>
+                                <div class="xe-comment">
+                                    <a href="#" class="xe-user-name overflowClip_1">
+                                        <strong>{{ item.name }}</strong>
+                                    </a>
+                                    <p class="overflowClip_2">{{ item.department }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+            <br />
+            
+            <h4 class="text-gray"><i class="fa-star " style="margin-right: 7px;color:red" id="河南"></i>河南</h4>
+            <div class="row">
+                <div v-for="item in university_hn">
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="xe-widget xe-conversations box2 label-info" :onclick="[item.open_src]"
+                            data-toggle="tooltip" data-placement="bottom" title="" :data-original-title="[item.name]">
+                            <div class="xe-comment-entry">
+                                <a class="xe-user-img">
+                                    <img :src="[item.img_src]" class="lozad img-circle" width="40">
+                                </a>
+                                <div class="xe-comment">
+                                    <a href="#" class="xe-user-name overflowClip_1">
+                                        <strong>{{ item.name }}</strong>
+                                    </a>
+                                    <p class="overflowClip_2">{{ item.department }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+            <br />
+            <h4 class="text-gray"><i class="fa-star " style="margin-right: 7px;color:red" id="山东"></i>山东</h4>
+            <div class="row">
+                <div v-for="item in university_sd">
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="xe-widget xe-conversations box2 label-info" :onclick="[item.open_src]"
+                            data-toggle="tooltip" data-placement="bottom" title="" :data-original-title="[item.name]">
+                            <div class="xe-comment-entry">
+                                <a class="xe-user-img">
+                                    <img :src="[item.img_src]" class="lozad img-circle" width="40">
+                                </a>
+                                <div class="xe-comment">
+                                    <a href="#" class="xe-user-name overflowClip_1">
+                                        <strong>{{ item.name }}</strong>
+                                    </a>
+                                    <p class="overflowClip_2">{{ item.department }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+            <br />
+            <!-- C9 BEGIN-->
+            <h4 class="text-gray"><i class="fa-star " style="margin-right: 7px;color:red" id="C9"></i>C9</h4>
+            <div class="row">
+                <div v-for="item in university_C9">
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="xe-widget xe-conversations box2 label-info" :onclick="[item.open_src]"
+                            data-toggle="tooltip" data-placement="bottom" title="" :data-original-title="[item.name]">
+                            <div class="xe-comment-entry">
+                                <a class="xe-user-img">
+                                    <img :src="[item.img_src]" class="lozad img-circle" width="40">
+                                </a>
+                                <div class="xe-comment">
+                                    <a href="#" class="xe-user-name overflowClip_1">
+                                        <strong>{{ item.name }}</strong>
+                                    </a>
+                                    <p class="overflowClip_2">{{ item.department }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br />
+            <!-- C9 End -->
+
+            <!-- CSA -->
+            <h4 class="text-gray"><i class="fa-star" style="margin-right: 7px;color:red" id="CSA"></i>计算机A类评级</h4>
+            <div class="row">
+                <div v-for="item in university_CSA">
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="xe-widget xe-conversations box2 label-info" :onclick="[item.open_src]"
+                            data-toggle="tooltip" data-placement="bottom" title="" :data-original-title="[item.name]">
+                            <div class="xe-comment-entry">
+                                <a class="xe-user-img">
+                                    <img :src="[item.img_src]" class="lozad img-circle" width="40">
+                                </a>
+                                <div class="xe-comment">
+                                    <a href="#" class="xe-user-name overflowClip_1">
+                                        <strong>{{ item.name }}{{ item.level }}</strong>
+                                    </a>
+                                    <p class="overflowClip_2">{{ item.department }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <!--END CSA -->
+            <!-- SEA -->
+            <h4 class="text-gray"><i class="fa-star" style="margin-right: 7px;color:red" id="SEA"></i>软工A类评级</h4>
+            <div class="row">
+                <div v-for="item in university_SEA">
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="xe-widget xe-conversations box2 label-info" :onclick="[item.open_src]"
+                            data-toggle="tooltip" data-placement="bottom" title="" :data-original-title="[item.name]">
+                            <div class="xe-comment-entry">
+                                <a class="xe-user-img">
+                                    <img :src="[item.img_src]" class="lozad img-circle" width="40">
+                                </a>
+                                <div class="xe-comment">
+                                    <a href="#" class="xe-user-name overflowClip_1">
+                                        <strong>{{ item.name }}{{ item.level }}</strong>
+                                    </a>
+                                    <p class="overflowClip_2">{{ item.department }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <!--END SEA -->
+
+            <!-- 985 -->
+            <h4 class="text-gray"><i class="fa-star" style="margin-right: 7px;color:red" id="985"></i>985</h4>
+            <div class="row">
+                <div v-for="item in university_985">
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="xe-widget xe-conversations box2 label-info" :onclick="[item.open_src]"
+                            data-toggle="tooltip" data-placement="bottom" title="" :data-original-title="[item.name]">
+                            <div class="xe-comment-entry">
+                                <a class="xe-user-img">
+                                    <img :src="[item.img_src]" class="lozad img-circle" width="40">
+                                </a>
+                                <div class="xe-comment">
+                                    <a href="#" class="xe-user-name overflowClip_1">
+                                        <strong>{{ item.name }}</strong>
+                                    </a>
+                                    <p class="overflowClip_2">{{ item.department }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <!--END 985 -->
+
+            <!-- 热门双非 -->
+            <h4 class="text-gray"><i class="fa-star " style="margin-right: 7px;color:red" id="热门双非"></i>热门双非</h4>
+            <div class="row">
+                <div v-for="item in university_热门双非">
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="xe-widget xe-conversations box2 label-info" :onclick="[item.open_src]"
+                            data-toggle="tooltip" data-placement="bottom" title="" :data-original-title="[item.name]">
+                            <div class="xe-comment-entry">
+                                <a class="xe-user-img">
+                                    <img :src="[item.img_src]" class="lozad img-circle" width="40">
+                                </a>
+                                <div class="xe-comment">
+                                    <a href="#" class="xe-user-name overflowClip_1">
+                                        <strong>{{ item.name }}</strong>
+                                    </a>
+                                    <p class="overflowClip_2">{{ item.department }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br />
+            <!--END 热门双非 -->
+            <footer class="main-footer sticky footer-type-1">
+                <div class="footer-inner">
+
+                    <div class="footer-text  text-center col-md-6 col-xs-6 col-md-offset-3 col-xs-offset-3" >
+                    	                        <p>&copy; 2020
+                         DESIGN BY 唯</p>
+                         <p>本站是“CS研伴”微信小程序的院校信息查询功能模块</p>
+                         
+                    	<p>鄂ICP备19024614号</p>
+                    	<p>个人开发非考研机构</p>
+
+                    </div>
+
+                    <div class="go-up" >
+                        <a href="#" rel="go-top">
+                            <i class="fa-angle-up"></i>
+                        </a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+			var $root = $('html, body');
+			$('.smooth').click(function() {
+			    $root.animate({
+			        scrollTop: $( $.attr(this, 'href') ).offset().top
+			    }, 500);
+			    console.log("点击")
+			    return false;
+			});
+
+        })
+
+    </script>
+
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/TweenMax.min.js"></script>
+    <script src="../assets/js/resizeable.js"></script>
+    <script src="../assets/js/joinable.js"></script>
+    <script src="../assets/js/occult_api.js"></script>
+    <script src="../assets/js/occult_toggles.js"></script>
+    <script src="../assets/js/occult_custom.js"></script>
+    <script src="../assets/js/lozad.js"></script>
+
+    <script>
+        function getQueryVariable(variable) {
+            var query = window.location.search.substring(1);
+            var vars = query.split("&");
+            for (var i = 0; i < vars.length; i++) {
+                var pair = vars[i].split("=");
+                if (pair[0] == variable) { return pair[1]; }
+            }
+            return (false);
+        }
+
+        var Useropenid = getQueryVariable('useropenid')
+        
+        var a = new Vue({
+            el: "#app",
+            data: {
+            	/*更新日志 
+            	  2020.04.16 新增浙江区域
+            	  2020.05.06 新增湖南地区
+            	  2020.05.17 新增河南地区
+            	  我会尽量保持一周一更，具体更哪些内容根据当周收集到的信息而定
+            	  2020.05.31 新增山东地区
+            	*/
+                province: [],
+                university_bj: [],
+                university_sh: [],
+                university_js: [],
+                university_hb: [],
+                university_gd: [],
+                university_zj: [],
+                university_hun: [],
+                university_hn: [],
+                university_sd: [],
+                university_C9: [],
+                university_CSA: [],
+                university_SEA: [],
+                university_985: [],
+                university_热门双非: [],
+                useropenid: ''
+            },
+            created: function () {
+                console.log('vue created')
+                this.useropenid = Useropenid
+                var that = this
+                axios({
+                    method: 'get',
+                    url: 'https://f804006.xyz/cs_partner/text.json',
+                    headers: {
+                        'Access-Control-Allow-Origin': '*',
+                        'Content-Type': 'application/json',
+                    },
+                    withCredentials: true,
+                    credentials: 'same-origin',
+                }).then(function (res) {
+                    for (var prop in res.data) {
+                    	if(prop != 'province'){
+                    	//	console.log(prop)
+                    		for(var index in res.data[prop]){
+                    			var len = res.data[prop][index].open_src.length
+                                if(that.useropenid != false){
+                                		res.data[prop][index].open_src = res.data[prop][index].open_src.slice(0,len-12) + '&useropenid=' + that.useropenid + res.data[prop][index].open_src.slice(len-12)
+                                		console.log(res.data[prop][index].open_src)
+                                }
+                    		}
+                    	}
+                        Vue.set(a, prop, res.data[prop])
+                       
+                    }
+                    console.log(that
+                    )
+                });
+            },
+            methods:{
+            	test(){
+            		alert("点击")
+            		var ele = document.getElementById("#北京");
+                    console.log(ele)
+            	}
+            },
+        })
+        
+
+    </script>
+    <script>
+    	
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+
+
+<view style="height:1500rpx;background-color: #F0F8FF">
+<view class="container">
+  <view class="ded">
+    <text class="user-motto">
+    距离2021硕士研究生入学考试考试还有：
+    <text class="dd">{{d}}</text>天<text class="dd">{{h}}</text>时<text class="dd">{{m}}</text>分<text class="dd">{{s}}</text>秒     </text>
+
+  
+  
+<textarea class="inspire" placeholder="写一句话激励你自己吧..." value="{{ inspire }}" auto-height="true" bindinput="change">  </textarea>
+    
+
+  </view>
+
+</view>
+</view>
+
+
+<view class="love-new" bindtap="clickHandler" >
+          <image src="cloud://cs-partner-spfpf.6373-cs-partner-spfpf-1301704219/images/加油.png" style="width:100rpx;height:100rpx;"></image>
+<view class="cu-tag badge">{{ userinfo.cnt }}次</view>
+</view>
+
+<view class="margin">
+    <like-fx count="{{count}}"></like-fx>
+    
+</view>

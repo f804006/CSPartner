@@ -1,0 +1,19 @@
+/* pages/statistics/statistics.wxss */
+page{
+  background-color: white;
+  height: 1000px;
+}
+
+.detail{
+  font-size: 30rpx;
+  position: absolute;
+  right: 20rpx;
+  height: 80rpx;
+  line-height: 100rpx;
+  color: #888888;
+}
+
+.line{
+  height: 5rpx;
+  background-color: white;
+}

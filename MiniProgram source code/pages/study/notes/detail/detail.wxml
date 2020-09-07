@@ -1,0 +1,22 @@
+
+<view class="cu-card dynamic {{isCard?'no-card':''}}">
+  <view class="cu-item shadow"  style="border:1px solid #A9A9A9	">
+    <view class="cu-list menu-avatar">
+      <view class="cu-item">
+        <view class="content flex-sub round">
+          <view class="text-cyan text-xs flex">
+            记录于{{ note.time }}
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="cu-form-group align-start">
+      <textarea maxlength="-1" bindinput="textareaBInput" value="{{note.content}}" style="height:800rpx;"></textarea>
+    </view>
+
+    <text style="marign:10rpx; color:grey">共{{ note.content.length}}字</text>
+  </view>
+
+</view>
+
+<image src="cloud://cs-partner-spfpf.6373-cs-partner-spfpf-1301704219/images/删 除.png" class='delete_class' bindtap="todelete" data-id="{{ note._id }}"></image>

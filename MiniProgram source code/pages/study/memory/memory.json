@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom"
+  },
+  "navigationBarTextStyle": "white",
+  "navigationStyle": "custom"
+ 
+}

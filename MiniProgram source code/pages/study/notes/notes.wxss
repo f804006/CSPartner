@@ -1,0 +1,47 @@
+/* pages/study/study.wxss */
+page{
+   background: white
+}
+
+.item{
+  display: flex; 
+  flex-direction: row;
+  background-color: #ffffff;
+}
+
+.typeone{
+  width:60rpx;
+  height:80rpx;
+  padding-top: 20rpx;
+}
+
+.detail{
+  font-size: 30rpx;
+  position: absolute;
+  right: 20rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  color: #888888;
+}
+
+.input-style{
+  color: #000;
+  width: 700rpx;
+  border: 0px solid #d0d0d0;
+  height: 80rpx;
+}
+
+.input-style-name{
+  color: #000;
+  width: 600rpx;
+  border: 0rpx solid #d0d0d0;
+  height: 60rpx;
+  margin-top: 20rpx;
+}
+
+.name{
+  padding-top: 30rpx;
+  padding-left: 50rpx;
+  padding-bottom: 30rpx;
+  font-size: 30rpx;
+}

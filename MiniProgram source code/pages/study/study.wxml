@@ -1,0 +1,100 @@
+<view class="cu-bar solid-bottom" style="background-color: #F0F8FF;">
+  <view class="action">
+    <text class="cuIcon-title text-orange"></text> 备考内容
+  </view>
+  <view class="action">
+    <button class="cu-btn bg-green shadow " bindtap="add" data-target="DialogModal0" style="width:200rpx"
+    >添加</button>
+  </view>
+</view>
+
+<view class="cu-modal {{modalName=='DialogModal0'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar justify-end" style="background-color:#F0F8FF">
+      <view class="content">添加新内容</view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-red"></text>
+      </view>
+    </view>
+
+
+    <view class='item'>
+    <view class='name'>标题：</view>
+      <view class='detail'>
+        <input class='input-style-name' placeholder="备考内容名称（例如：英语二）" type='text' maxlength='8' bindinput='newtitle' style="color:grey;"></input>
+      </view>
+    </view>
+
+
+    <view class="cu-bar justify-end" style="background-color:#F0F8FF">
+      <view class="action">
+        <button class="cu-btn bg-green margin-left" bindtap="verify" style="width:200rpx">确认添加</button>
+      </view>
+    </view>
+
+  </view>
+</view> 
+
+<view class="grid col-3 padding-sm">
+  <view class="padding-sm" wx:for="{{List}}" wx:key  >
+    <view class="bg-olive  padding radius text-center shadow-blur animation-fade" bindlongtap="longTap" bindtouchstart="handleTouchStart" bindtouchend="handleTouchEnd" bindtap="detail" data-title="{{ item.title }}" data-id="{{ item.item_id }}" data-index="{{ index }}" data-k="0" style="height:100rpx;width:200rpx">
+      <view class="text-lg">{{item.title}}</view>
+      <!-- <view class="margin-top-sm text-Abc">{{item.name}}</view> -->
+    </view>
+  </view>
+</view> 
+
+
+<view class="cu-bar solid-bottom margin-top" style="background-color: #F0F8FF;">
+  <view class="action">
+    <text class="cuIcon-title text-orange "></text> 艾宾浩斯记忆任务
+  </view>
+  <view class="action">
+    <button class="cu-btn bg-cyan shadow" bindtap="add" data-target="DialogModal1" style="width:200rpx">添加</button>
+  </view>
+</view>
+
+<view class="cu-modal {{modalName=='DialogModal1'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar justify-end" style="background-color:#F0F8FF">
+      <view class="content">添加新任务</view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-red"></text>
+      </view>
+    </view>
+
+
+<view class='item '>
+    <view class='name'> 标题:</view>
+    <view class='detail'>
+      <input  class='input-style-name' placeholder="新任务标题" type='text' maxlength='8' bindinput='new_abhstitle'   style="color:grey"></input>
+    </view>
+  </view>
+
+
+<view class='item'>
+    <view class='name'> 开始时间:</view>
+
+    <text class='yqm'>{{ current_time }}</text>
+
+  </view>
+
+    <view class="cu-bar justify-end" style="background-color:#F0F8FF">
+      <view class="action">
+        <button class="cu-btn bg-green margin-left" bindtap="add_abhs" >确认添加</button>
+      </view>
+    </view>
+
+  </view>
+</view>
+
+<view class="grid col-3 padding-sm">
+  <view class="padding-sm" wx:for="{{Abhs_List}}"  >
+    <view class="bg-cyan padding radius text-center shadow-blur animation-fade" style="background-color: #F0F8FF;"
+    bindlongtap="longTap" bindtouchstart="handleTouchStart" bindtouchend="handleTouchEnd" bindtap="detail_abhs" data-title="{{ item.title }}" data-id="{{ item._id }}" data-index="{{ index }}" data-k="1" style="height:100rpx;width:200rpx">
+      <view class="text-lg">{{item.title}}</view>
+     <view class="cu-tag badge" wx:if="{{ item.achieve == true }}">已完成</view>
+      <!-- <view class="margin-top-sm text-Abc">{{item.name}}</view> -->
+    </view>
+  </view>
+</view>

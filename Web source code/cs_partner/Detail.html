@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>详细页面</title>
+
+
+    <link rel="stylesheet" href="../assets/css/fonts/fontawesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+
+    <link rel="stylesheet" href="../assets/css/occult_main.css">
+    <link rel="stylesheet" href="../assets/css/occult_components.css">
+    <link rel="stylesheet" href="../assets/css/occult_surface.css">
+    <link rel="stylesheet" href="../assets/css/nav.css">
+    <script src="../assets/js/jquery-1.11.1.min.js"></script>
+    <!-- <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script> -->
+    <script src="../assets/js/vue.js"></script>
+    <script src="../assets/js/axios.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+    	
+    </script>
+
+
+</head>
+
+<body class="page-body boxed-container" >
+
+    <div id="app">
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        	&times;
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">
+                            用户信息修改
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">昵称</span>
+                            <input id="exampleInputname" class="form-control" placeholder="请输入昵称"
+                                v-model="username">
+                        </div>
+                        <!-- <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div> -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                        </button>
+                        <button type="button" class="btn btn-primary" @click="update_info()">
+                            提交更改
+                        </button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        <div class="page-container" >
+            <!-- add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always -->
+            <div class="main-content" >
+                <div class="row" >
+                    <div class="col-md-12">
+                        <div class="panel panel-default" id="test">
+                            <!-- 关于网站 -->
+                            <div v-html="htmldata"></div>
+
+                            <h4>评论区</h4>
+
+
+
+                            <h5 v-if="comments.length == 0" class="text-center">暂无评论</h4>
+                                <div class="panel panel-default" v-for="item,index in page_comments">
+                                    <div class="panel-heading">{{ item.username }} 于 {{ item.time }} 说：</div>
+                                    <div class="panel-body" style="font-size:15px;">
+                                        {{ item.content }}
+                                    </div>
+                                     <div class="panel-body" style="font-size:15px;color:	#ADD8E6" @click="openReply(index)">
+                                       {{ (item.replySign == true) ? '收起' : '查看'}}回复
+                                    </div>
+                                    <div v-if="item.replySign == true">
+                                      <div class="panel-body" style="font-size:10px;color:#808080;marign-left:10px;" v-for="item2 in item.reply">
+                                       <p>{{ item2.split('@#$')[0] }}</p>
+                                       <p style="font-size:15px;color:	black;border-bottom: 2px solid #f5f5f5;marign-top:50px;">{{item2.split('@#$')[1]}}</p>
+
+                                      </div>	
+									  <div class="form-inline" style="marign-top:10px;" v-if="useropenid != false">
+										  <div class="form-group">
+										    <label class="sr-only" for="exampleInputEmail3">Email address</label>
+										    <input class="form-control" v-model="replyContent" placeholder="我也说两句...">
+										  </div>
+										  <button @click="replyComment(index)" class="btn btn-info">回复</button>
+									  </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="btn-group " style="position:relative;left:40%;">
+                                    <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        第{{ page+1 }}页 <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li v-for="item in page_cnt">
+
+                                            <a @click="pagechange(item)">第{{ item }}页</a>
+
+                                        </li>
+                                    </ul>
+                                </div>
+                                <p>
+                                    <h4>评论</h4>
+                                    <h6 @click="hide = false" style="color: cornflowerblue;" v-if="useropenid == false">
+                                        需进入小程序端
+                                        </h4>
+                                </p>
+                                <div class="model fade in" style="display:block" tabindex="-1" v-if="hide == false">
+                                    <div class="modal-dialog modal-sm" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" @click="hide = true">
+                                                    <span>&times;</span>
+                                                </button>
+                                                <h4>小程序码</h3>
+                                            </div>
+
+                                            <div class="modal-title">
+                                                <img src="../assets/images/gh_fa83f050a826_344.jpg"
+                                                    class="img-circle center-block" style="height: 140px;width: 140px;">
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-info"
+                                                    @click="hide = true">隐藏</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <p v-if="useropenid != false"><textarea class="form-control" rows="3"
+                                        placeholder="发表你的评论" v-model="commentbody"></textarea></p>
+
+                                <p v-if="useropenid != false">
+                                    <button @click="Comment" class="btn btn-primary">提交</button>
+                                </p>
+
+
+                                <!-- 按钮触发模态框 -->
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#myModal"
+                                    v-if="useropenid != false">
+                                    信息修改
+                                </button>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Main Footer -->
+                <footer class="main-footer sticky footer-type-1 fixed" >
+                    <div class="footer-inner">
+                    <div class="footer-text  text-center col-md-6 col-xs-6 col-md-offset-3 col-xs-offset-3" >
+                    	                        <p>&copy; 2020
+                         DESIGN BY 唯</p>
+                        <p>本站是“CS研伴”微信小程序的院校信息查询功能模块</p>
+                    	<p>鄂ICP备19024614号</p>
+                    	<p>个人开发非考研机构</p>
+
+                    </div>
+                        <div class="go-up">
+                            <a href="#" rel="go-top">
+                                <i class="fa-angle-up"></i>
+                            </a>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <!-- Bottom Scripts -->
+
+    <script src="../assets/js/axios.min.js"></script>
+    <script src="../assets/js/TweenMax.min.js"></script>
+    <script src="../assets/js/resizeable.js"></script>
+    <script src="../assets/js/joinable.js"></script>
+    <script src="../assets/js/occult_api.js"></script>
+    <script src="../assets/js/occult_toggles.js"></script>
+    <script src="../assets/js/occult_custom.js"></script>
+    
+
+
+    <script>
+
+        function getQueryVariable(variable) {
+            var query = window.location.search.substring(1);
+            var vars = query.split("&");
+            for (var i = 0; i < vars.length; i++) {
+                var pair = vars[i].split("=");
+                if (pair[0] == variable) { return pair[1]; }
+            }
+            return (false);
+        }
+        var Schoolname = getQueryVariable('name')
+        console.log("Schoolname =", Schoolname)
+        var Useropenid = getQueryVariable('useropenid')
+        console.log("Useropenid =", Useropenid)
+        var time = new Date()
+        var parsetime = time.getFullYear() + '.' + (parseInt(time.getMonth()) + 1).toString() + '.' + time.getDate() + '  ' + time.toLocaleTimeString();
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                commentbody: '默认值',
+                useropenid: Useropenid,
+                hide: true,
+                schoolname: Schoolname,
+                username: 'dasdsa',
+                comments: [],
+                replySign:[],
+                replyContent:'',
+                page_comments: [],
+                page: 0,//比显示给用户的数据少1
+                page_cnt: [],
+                htmldata: ''
+            },
+            methods: {
+                Comment() {
+                    var that = this
+                    var mydata = new FormData()
+                    
+                    mydata.append("content", this.commentbody)
+                    mydata.append("useropenid", Useropenid)
+                    mydata.append("time", parsetime)
+                    mydata.append("schoolname", Schoolname)
+                    console.log(mydata)
+                    axios({
+                        method: 'POST',
+                        url: 'https://f804006.xyz/assets/db/AddNewComment.php',
+                        headers: {
+                            'Content-Type': 'text/html;charset=utf-8',
+                        },
+                        data: mydata
+
+                    }).then(function (res) {
+                        console.log(res.data)
+                        alert('评论成功')
+                        window.location.reload();
+                    });
+                },
+                update_info() {
+                    console.log(this.username)
+                    var mydata = new FormData()
+                    mydata.append("username", this.username)
+                    mydata.append("useropenid", this.useropenid)
+                    
+                    var that = this
+                    axios({
+                        method: 'POST',
+                        url: 'https://f804006.xyz/assets/db/UpdateUserInfo.php',
+                        headers: {
+                            'Content-Type': 'text/html;charset=utf-8',
+                        },
+                        data: mydata
+
+                    }).then(function (res) {
+
+                        console.log(res.data)
+                        alert("修改成功！")
+
+                    });
+                },
+                setcomments() {
+                    var cnt = (this.comments.length - this.page * 5 >= 5) ? 5 : this.comments.length - this.page * 5
+                    this.page_comments = this.comments.slice(this.page * 5, this.page * 5 + cnt)
+                    console.log(this.page_comments)
+                },
+                pagechange(e) {
+                    console.log(e)
+                    this.page = e - 1
+                    this.setcomments()
+                },
+                openReply(index){
+                	console.log((this.page*5)+index)
+                	this.comments[(this.page*5)+index].replySign = !this.comments[(this.page*5)+index].replySign
+                	
+                    vm.$forceUpdate()
+                    
+                },
+                replyComment(index){
+                	var time = new Date()
+                    var currtTime = time.getFullYear() + '.' + (parseInt(time.getMonth()) + 1).toString() + '.' + time.getDate() + '  ' + time.toLocaleTimeString();
+                	console.log("准备为评论",this.comments[(this.page*5)+index].id,"添加回复")
+                	var newReply = this.comments[(this.page*5)+index].reply.join(',') + ',' + this.username + '于 '+ currtTime + ' 回复' + '@#$' + this.replyContent
+                	console.log(newReply)
+                	console.log("更新后的内容修改为:",newReply)
+                	var replyData = new FormData()
+                	replyData.append('id',this.comments[(this.page*5)+index].id)
+                	replyData.append('content',newReply)
+                	var that = this
+                	axios({
+                		method:'POST',
+                		url:'https://f804006.xyz/assets/db/AddCommentReply.php',
+                		headers: {
+                            'Content-Type': 'text/html;charset=utf-8',
+                        },
+                        data: replyData
+                	}).then(function(res){
+                		console.log(res.data)
+                		that.comments[index].reply.push(that.username + '于 '+ currtTime + ' 回复'+'@#$' + that.replyContent)
+                		vm.$forceUpdate()
+                		alert("回复成功")
+                	})
+                }
+            },
+            created: function () {
+                var that = this
+                console.log("vue created")
+                if (this.useropenid == false) {
+                    this.hide = false
+                }
+                else {
+                    var mydata = new FormData()
+                    mydata.append("useropenid", Useropenid)
+                  
+                    axios({
+                        method: 'POST',
+                        url: 'https://f804006.xyz/assets/db/GetUserInfo.php',
+                        headers: {
+                            'Content-Type': 'text/html;charset=utf-8',
+                        },
+                        data: mydata
+
+                    }).then(function (res) {
+
+                        console.log(res.data)
+                        that.username = res.data.name
+                        if(that.username == null){
+                        	console.log("新用户，准备添加信息")
+                        	var p = new FormData()
+                        	p.append('useropenid',Useropenid)
+                        	axios({
+                        		method:'POST',
+                        		url:'https://f804006.xyz/assets/db/AddNewUser.php',
+                        		headers:{
+                        			'Content-Type':'text/html;charset=utf-8'
+                        		},
+                        		data: p
+                        	}).then(function(res){
+                        		axios({
+                        			method:'POST',
+                        			url:'https://f804006.xyz/assets/db/GetUserInfo.php',
+                        			headers:{
+                        				'Content-Type':'text/html;charset=utf-8'
+                        			},
+                        			data:p
+                        		}).then(function(res){
+                        			that.username = res.data.name
+                        		})
+                        	})
+                        }
+                        console.log("username:",that.username);
+                    });
+                }
+
+                var t = new FormData()
+                t.append("schoolname", Schoolname)
+                axios({
+                    method: 'POST',
+                    url: 'https://f804006.xyz/assets/db/GetCommentInfo.php',
+                    headers: {
+                        'Content-Type': 'text/html;charset=utf-8',
+                    },
+                    data: t
+
+                }).then(function (res) {
+                    
+                    that.comments = res.data
+                    var j = 0
+                    for (var i = 0; i < that.comments.length; i++) {
+                        if (i % 5 == 0) {
+                            that.page_cnt[j++] = (i / 5 + 1)
+                        }
+                        that.comments[i].reply = that.comments[i].reply.split(',')
+                        that.comments[i].replySign = false
+                       
+                    }
+                    console.log(that.comments)
+                    function getusername() {
+                        if (i >= that.comments.length) {
+                            that.setcomments()
+                            return;
+                        }
+                        var op = new FormData()
+                        op.append("useropenid", that.comments[i].identification)
+                        axios({
+                            method: 'POST',
+                            url: 'https://f804006.xyz/assets/db/GetUserInfo.php',
+                            headers: {
+                                'Content-Type': 'text/html;charset=utf-8',
+                            },
+                            data: op
+
+                        }).then(function (res) {
+                            that.comments[i].username = res.data.name
+                            i++;
+                            getusername()
+                        });
+                    }
+                    var i = 0;
+                    getusername()
+
+
+                });
+
+                axios({
+                    method: 'GET',
+                    url: 'https://f804006.xyz/cs_partner/uhtml_txt/' + Schoolname + '.php',
+                    headers: {
+                        'Content-Type': 'text/html;charset=utf-8',
+                    },
+
+                }).then(function (res) {
+                    that.htmldata = res.data
+                    // alert("网站重构中")
+                });
+            }
+        })
+
+
+
+    </script>
+</body>
+
+</html>

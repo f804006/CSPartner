@@ -1,0 +1,132 @@
+page{
+   background: white
+}
+
+.steps-bottom.cu-steps .cu-item .num::before {
+  content: "\e668";
+  font-family: 'iconfont';
+}
+
+.bg{
+  width: 100%;
+  height: 170rpx;
+  background-color: #F0F8FF;
+}
+.logo{
+  padding-top: 40rpx;
+  color: #ffffff;
+}
+.yqm{
+  color: black; 
+  position: relative;
+  left: 80rpx;
+  top:32rpx;
+  font-size: 32rpx
+}
+.first{
+  font-size: 40rpx;
+  position: relative;
+  left:50rpx;
+  color: black;
+  
+}
+
+.btn-submit{
+  font-size: 40rpx;
+  position: relative;
+  left:85%;
+  color: black;
+  font-weight: bold;
+}
+
+.img{
+  position: absolute;
+  top:58rpx;
+  left:73%;
+}
+
+.input-style{
+  color: #000;
+  width: 700rpx;
+  border: 0px solid #d0d0d0;
+  height: 80rpx;
+}
+
+.input-style-name{
+  color: #000;
+  width: 600rpx;
+  border: 0rpx solid #d0d0d0;
+  height: 60rpx;
+  margin-top: 20rpx;
+}
+
+.content{
+  font-family: "Microsoft YaHei";
+}
+
+.name{
+  padding-top: 30rpx;
+  padding-left: 50rpx;
+  padding-bottom: 30rpx;
+  font-size: 30rpx;
+}
+
+.detail{
+  font-size: 30rpx;
+  position: absolute;
+  right: 20rpx;
+  height: 80rpx;
+  line-height: 100rpx;
+  color: #888888;
+}
+
+.detail-sex{
+  position: absolute;
+  left: 130rpx;
+  font-size: 30rpx;
+  line-height: 100rpx;
+  height: 100rpx;
+  color: #888888;
+}
+.detail-adr{
+  font-size: 15px;
+  position: absolute;
+  right: 20rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  color: #888888;
+}
+.line{
+  border:2rpx solid #cccccc;
+  opacity: 0.2;
+  width: 90%;
+  margin: 0 auto;
+}
+.item{
+  display: flex;
+  flex-direction: row;
+  background-color: #ffffff;
+}
+
+.canvas {
+    margin: 220rpx auto;
+    width: 150px;
+    height: 150px;
+    /* border: 1px solid black; */
+}
+
+
+.select-box{
+  display: flex;
+  align-items:center;
+  padding-left:30rpx;
+}
+.select{ 
+  font-size: 30rpx;
+  padding:45rpx 0 30rpx 30rpx;
+  color: #000;
+}
+.select-img{
+   width:30rpx;
+   height:30rpx;
+}

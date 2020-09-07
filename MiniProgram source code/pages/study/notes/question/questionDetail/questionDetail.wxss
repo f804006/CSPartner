@@ -1,0 +1,16 @@
+/* pages/study/notes/question/questionDetail/questionDetail.wxss */
+page{
+  background-color: white;
+}
+
+.delete{
+  position: absolute;
+  top: 90%;
+  left: 90%
+}
+
+.favor{
+  position: absolute;
+  top: 90%;
+  left: 75%
+}

@@ -1,0 +1,1090 @@
+{
+    "province":[
+        {
+            "name":"北京",
+            "href":"#北京"
+        },
+        {
+            "name":"上海",
+            "href":"#上海"
+        },
+        {
+            "name":"江苏",
+            "href":"#江苏"
+        },
+        {
+            "name":"湖北",
+            "href":"#湖北"
+        },
+        {
+            "name":"广东",
+            "href":"#广东"
+        },
+        {
+            "name":"浙江",
+            "href":"#浙江"
+        },
+        {
+            "name":"湖南",
+            "href":"#湖南"
+        },
+        {
+            "name":"河南",
+            "href":"#河南"
+        },
+        {
+            "name":"山东",
+            "href":"#山东"
+        },
+        {
+            "name":"C9",
+            "href":"#C9"
+        },
+        {
+            "name":"计算机学科评估A类",
+            "href":"#CSA"
+        },
+        {
+            "name":"软件工程学科评估A类",
+            "href":"#SEA"
+        },
+        {
+            "name":"985",
+            "href":"#985"
+        },
+        {
+            "name":"热门双非",
+            "href":"#热门双非"
+        }
+    ],
+    "university_bj":[
+        {
+            "name":"北京大学",
+            "img_src":"https://f804006.xyz/assets/images/大学Logo/北京大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'pku', '_blank')",
+            "department":"北京大学信息科学与技术学院，北京大学软件与微电子学院，北京大学信息工程学院，北京大学前沿交叉学科研究院"
+        },
+        {
+            "name":"清华大学",
+            "img_src":"../assets/images/大学Logo/清华大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'qhdx', '_blank')",
+            "department":"清华大学计算机科学与技术系，清华大学软件学院，清华大学深圳伯利克研究院"
+        },
+        {
+            "name":"北京理工大学",
+            "img_src":"../assets/images/大学Logo/北京理工大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'bit', '_blank')",
+            "department":"北京理工大学计算机学院"
+        },
+        {
+            "name":"北京航空航天大学",
+            "img_src":"../assets/images/大学Logo/北京航空航天大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'buaa', '_blank')",
+            "department":"北京航空航天大学计算机学院，北京航空航天大学软件学院"
+        },
+        {
+            "name":"北京师范大学",
+            "img_src":"../assets/images/大学Logo/北京师范大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'bnu', '_blank')",
+            "department":"北京师范大学信息科学与技术学院"
+        },
+        {
+            "name":"中国人民大学",
+            "img_src":"../assets/images/大学Logo/中国人民大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'ruc', '_blank')",
+            "department":"中国人民大学信息学院，中国人民大学高瓴人工智能学院（新）"
+        },
+        {
+            "name":"中国农业大学",
+            "img_src":"../assets/images/大学Logo/中国农业大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'cau', '_blank')",
+            "department":"中国农业大学信息与电子工程学院"
+        },
+        {
+            "name":"中央民族大学",
+            "img_src":"../assets/images/大学Logo/中央民族大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'muc', '_blank')",
+            "department":"中央民族大学信息科学与工程学院"
+        },
+        {
+            "name":"北京邮电大学",
+            "img_src":"../assets/images/大学Logo/北京邮电大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'bupt', '_blank')",
+            "department":"北京邮电大学计算机学院，北京邮电大学软件学院"
+        },
+        {
+            "name":"北京科技大学",
+            "img_src":"../assets/images/大学Logo/北京科技大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'ustb', '_blank')",
+            "department":"北京科技大学计算机与通信工程学院"
+        },
+        {
+            "name":"北京交通大学",
+            "img_src":"../assets/images/大学Logo/北京交通大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'bjtu', '_blank')",
+            "department":"北京交通大学计算机信息与技术学院，北京交通大学软件学院"
+        },
+        {
+            "name":"北京化工大学",
+            "img_src":"../assets/images/大学Logo/北京化工大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'buct', '_blank')",
+            "department":"北京化工大学信息科学与技术学院"
+        },
+        {
+            "name":"中国地质大学（北京）",
+            "img_src":"../assets/images/大学Logo/中国地质大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'cugb', '_blank')",
+            "department":"中国地质大学信息工程学院"
+        },
+        {
+            "name":"中国传媒大学",
+            "img_src":"../assets/images/大学Logo/中国传媒大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'cuc', '_blank')",
+            "department":"中国传媒大学计算机学院"
+        },
+        {
+            "name":"北京林业大学",
+            "img_src":"../assets/images/大学Logo/北京林业大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'bjfu', '_blank')",
+            "department":"北京林业大学信息学院"
+        },
+        {
+            "name":"华北电力大学",
+            "img_src":"../assets/images/大学Logo/华北电力大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'ncepu', '_blank')",
+            "department":"华北电力大学控制与计算机工程学院"
+        },
+        {
+            "name":"中国矿业大学（北京）",
+            "img_src":"../assets/images/大学Logo/中国矿业大学北京.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'cumtb', '_blank')",
+            "department":"中国矿业大学（北京）机电与信息工程学院"
+        },
+        {
+            "name":"中央财经大学",
+            "img_src":"../assets/images/大学Logo/中央财经大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'cufe', '_blank')",
+            "department":"中央财经大学信息学院"
+        }
+
+        
+    ],
+    "university_sh":[
+        {
+            "name":"上海交通大学",
+            "img_src":"../assets/images/大学Logo/上海交通大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'sjtu', '_blank')",
+            "department":"上海交通大学电子信息与电气工程学院"
+        },
+        {
+            "name":"复旦大学",
+            "img_src":"../assets/images/大学Logo/复旦大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'fudan', '_blank')",
+            "department":"复旦大学计算机学院，复旦大学软件学院"
+        },
+        {
+            "name":"同济大学",
+            "img_src":"../assets/images/大学Logo/同济大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'tongji', '_blank')",
+            "department":"同济大学"
+        },
+        {
+            "name":"华东师范大学",
+            "img_src":"../assets/images/大学Logo/华东师范大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'ecnu', '_blank')",
+            "department":"华东师范大学计算机科学与技术学院，华东师范大学软件工程学院，华东师范大学数据科学与工程学院"
+        },
+
+        {
+            "name":"华东理工大学",
+            "img_src":"../assets/images/大学Logo/华东理工大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'ecust', '_blank')",
+            "department":"华东理工大学信息科学与工程学院"
+        },
+        {
+            "name":"东华大学",
+            "img_src":"../assets/images/大学Logo/东华大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'dhu', '_blank')",
+            "department":"东华大学计算机科学与技术学院"
+        },
+        {
+            "name":"上海大学",
+            "img_src":"../assets/images/大学Logo/上海大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'shu', '_blank')",
+            "department":"上海大学计算机工程与科学学院"
+        },
+        {
+            "name":"上海财经大学",
+            "img_src":"../assets/images/大学Logo/上海财经大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'sufe', '_blank')",
+            "department":"上海财经大学信息管理与工程学院"
+        },
+        {
+            "name":"上海理工大学",
+            "img_src":"../assets/images/大学Logo/上海理工大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'usst', '_blank')",
+            "department":"上海理工大学光电信息与计算机工程学院"
+        },
+        {
+            "name":"上海科技大学",
+            "img_src":"../assets/images/大学Logo/上海科技大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'shkj', '_blank')",
+            "department":"上海理工大学信息科学与技术学院"
+        }
+    ],
+    "university_js":[
+        {
+            "name":"南京大学",
+            "img_src":"../assets/images/大学Logo/南京大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'nju', '_blank')",
+            "department":"南京大学计算机科学与技术系，南京大学软件学院"
+        },
+        {
+            "name":"东南大学",
+            "img_src":"../assets/images/大学Logo/东南大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'seu', '_blank')",
+            "department":"东南大学计算机科学与工程学院，东南大学苏州软件学院"
+        },
+        {
+            "name":"南京理工大学",
+            "img_src":"../assets/images/大学Logo/南京理工大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'njust', '_blank')",
+            "department":"南京理工大学计算机科学与工程学院"
+        },
+        {
+            "name":"南京师范大学",
+            "img_src":"../assets/images/大学Logo/南京师范大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'njnu', '_blank')",
+            "department":"南京师范大学计算机科学与技术学院"
+        },
+
+        {
+            "name":"南京航空航天大学",
+            "img_src":"../assets/images/大学Logo/南京航空航天大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'nuaa', '_blank')",
+            "department":"南京航空航天大学计算机科学与技术学院"
+        },
+        {
+            "name":"南京农业大学",
+            "img_src":"../assets/images/大学Logo/南京农业大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'njau', '_blank')",
+            "department":"南京农业大学"
+        },
+        {
+            "name":"河海大学",
+            "img_src":"../assets/images/大学Logo/河海大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'hhu', '_blank')",
+            "department":"河海大学计算机与信息学院，河海大学物联网工程学院"
+        },
+        {
+            "name":"苏州大学",
+            "img_src":"../assets/images/大学Logo/苏州大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'suda', '_blank')",
+            "department":"苏州大学计算机科学与技术学院"
+        },
+        {
+            "name":"江南大学",
+            "img_src":"../assets/images/大学Logo/江南大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'jiangnanu', '_blank')",
+            "department":"江南大学物联网工程学院，江南大学数字媒体学院"
+        },
+        {
+            "name":"南京邮电大学",
+            "img_src":"../assets/images/大学Logo/南京邮电大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'njupt', '_blank')",
+            "department":"南京邮电大学"
+        },
+        {
+            "name":"南京信息工程大学",
+            "img_src":"../assets/images/大学Logo/南京信息工程大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'njxxgc', '_blank')",
+            "department":"南京信息工程大学"
+        },
+        {
+            "name":"南京工业大学",
+            "img_src":"../assets/images/大学Logo/南京工业大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'njtech', '_blank')",
+            "department":"南京工业大学计算机科学与技术学院"
+        },
+        {
+            "name":"江苏大学",
+            "img_src":"../assets/images/大学Logo/江苏大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'ujs', '_blank')",
+            "department":"江苏大学计算机科学与通信工程学院"
+        }
+    ],
+    "university_hb":[
+        {
+            "name":"武汉大学",
+            "img_src":"../assets/images/大学Logo/武汉大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'whu', '_blank')",
+            "department":"武汉大学计算机学院"
+        },
+        {
+            "name":"华中科技大学",
+            "img_src":"../assets/images/大学Logo/华中科技大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'hust', '_blank')",
+            "department":"华中科技大学计算机科学与技术学院，华中科技大学软件学院"
+        },
+        {
+            "name":"武汉理工大学",
+            "img_src":"../assets/images/大学Logo/武汉理工大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'whut', '_blank')",
+            "department":"武汉理工大学计算机科学与技术学院"
+        },
+        {
+            "name":"华中师范大学",
+            "img_src":"../assets/images/大学Logo/华中师范大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'ccnu', '_blank')",
+            "department":"华中师范大学计算机学院"
+        },
+
+        {
+            "name":"中国地质大学（武汉）",
+            "img_src":"../assets/images/大学Logo/中国地质大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'cugwh', '_blank')",
+            "department":"中国地质大学（武汉）计算机学院"
+        },
+        {
+            "name":"华中农业大学",
+            "img_src":"../assets/images/大学Logo/华中农业大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'hzau', '_blank')",
+            "department":"华中农业大学"
+        },
+        {
+            "name":"中南财经政法大学",
+            "img_src":"../assets/images/大学Logo/中南财经政法大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'zuel', '_blank')",
+            "department":"中南财经政法大学信息与安全工程学院"
+        },
+        {
+            "name":"武汉科技大学",
+            "img_src":"../assets/images/大学Logo/武汉科技大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'wust', '_blank')",
+            "department":"武汉科技大学计算机科学技术学院"
+        }
+    ],
+    "university_gd":[
+        {
+            "name":"中山大学",
+            "img_src":"../assets/images/大学Logo/中山大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'sysu', '_blank')",
+            "department":"中山大学数据科学与计算机学院"
+        },
+        {
+            "name":"华南理工大学",
+            "img_src":"../assets/images/大学Logo/华南理工大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'scut', '_blank')",
+            "department":"华南理工大学计算机科学与工程学院，华南理工大学软件学院"
+        },
+        {
+            "name":"深圳大学",
+            "img_src":"../assets/images/大学Logo/深圳大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'szu', '_blank')",
+            "department":"深圳大学计算机与软件学院"
+        },
+        {
+            "name":"暨南大学",
+            "img_src":"../assets/images/大学Logo/暨南大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'jnu', '_blank')",
+            "department":"暨南大学信息科学技术学院"
+        },
+        {
+            "name":"华南师范大学",
+            "img_src":"../assets/images/大学Logo/华南师范大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'scnu', '_blank')",
+            "department":"华南师范大学计算机学院，华南师范大学软件学院"
+        },
+   
+        {
+            "name":"广东工业大学",
+            "img_src":"../assets/images/大学Logo/广东工业大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'gdut', '_blank')",
+            "department":"广东工业大学"
+        },
+        {
+            "name":"南方科技大学",
+            "img_src":"../assets/images/大学Logo/南方科技大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'nfkj', '_blank')",
+            "department":"南方科技大学"
+        },
+        {
+            "name":"华南农业大学",
+            "img_src":"../assets/images/大学Logo/华南农业大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'scau', '_blank')",
+            "department":"华南农业大学数学与信息学院、电子工程学院"
+        }
+    ],
+    "university_zj":[
+        {
+            "name":"浙江大学",
+            "img_src":"../assets/images/大学Logo/浙江大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'zju', '_blank')",
+            "department":"浙江大学计算机科学与技术学院，浙江大学软件学院"
+        },
+        {
+            "name":"杭州电子科技大学",
+            "img_src":"../assets/images/大学Logo/杭州电子科技大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'hdu', '_blank')",
+            "department":""
+        },
+        {
+            "name":"浙江工业大学",
+            "img_src":"../assets/images/大学Logo/浙江工业大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'zjut', '_blank')",
+            "department":""
+        }
+    ],
+    "university_hun":[
+        {
+            "name":"中南大学",
+            "img_src":"../assets/images/大学Logo/中南大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'znu', '_blank')",
+            "department":""
+        },
+        {
+            "name":"湖南大学",
+            "img_src":"../assets/images/大学Logo/湖南大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'hnu', '_blank')",
+            "department":""
+        },
+        {
+            "name":"湖南师范大学",
+            "img_src":"../assets/images/大学Logo/湖南师范大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'hunnu', '_blank')",
+            "department":""
+        },
+        {
+            "name":"国防科技大学",
+            "img_src":"../assets/images/大学Logo/国防科技大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'haut', '_blank')",
+            "department":""
+        },
+        {
+            "name":"湘潭大学",
+            "img_src":"../assets/images/大学Logo/湘潭大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'xtu', '_blank')",
+            "department":""
+        },
+        {
+            "name":"长沙理工大学",
+            "img_src":"../assets/images/大学Logo/长沙理工大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'csust', '_blank')",
+            "department":""
+        }
+    ],
+    "university_hn":[
+        {
+            "name":"郑州大学",
+            "img_src":"../assets/images/大学Logo/郑州大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'zzu', '_blank')",
+            "department":""
+        },
+        {
+            "name":"河南大学",
+            "img_src":"../assets/images/大学Logo/河南大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'henu', '_blank')",
+            "department":""
+        },
+        {
+            "name":"河南工业大学",
+            "img_src":"../assets/images/大学Logo/河南工业大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'haut', '_blank')",
+            "department":""
+        }
+    ],
+    "university_sd":[
+        {
+            "name":"山东大学",
+            "img_src":"../assets/images/大学Logo/山东大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'sdu', '_blank')",
+            "department":""
+        },
+        {
+            "name":"中国海洋大学",
+            "img_src":"../assets/images/大学Logo/中国海洋大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'ouc', '_blank')",
+            "department":""
+        }
+    ],
+    "university_C9":[
+        {
+            "name":"清华大学",
+            "img_src":"../assets/images/大学Logo/清华大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'qhdx', '_blank')",
+            "department":"清华大学"
+        },
+        {
+            "name":"北京大学",
+            "img_src":"../assets/images/大学Logo/北京大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'pku', '_blank')",
+            "department":"北京大学"
+        },
+        {
+            "name":"上海交通大学",
+            "img_src":"../assets/images/大学Logo/上海交通大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'sjtu', '_blank')",
+            "department":"上海交通大学"
+        },
+        {
+            "name":"复旦大学",
+            "img_src":"../assets/images/大学Logo/复旦大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'fudan', '_blank')",
+            "department":"复旦大学"
+        },
+        {
+            "name":"中国科学技术大学",
+            "img_src":"../assets/images/大学Logo/中国科学技术大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'ustc', '_blank')",
+            "department":"中国科学技术大学"
+        },
+        {
+            "name":"浙江大学",
+            "img_src":"../assets/images/大学Logo/浙江大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'zju', '_blank')",
+            "department":"浙江大学"
+        },
+        {
+            "name":"南京大学",
+            "img_src":"../assets/images/大学Logo/南京大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'nju', '_blank')",
+            "department":"南京大学"
+        },
+        {
+            "name":"哈尔滨工业大学",
+            "img_src":"../assets/images/大学Logo/中国科学技术大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'hit', '_blank')",
+            "department":"哈尔滨工业大学"
+        },
+        {
+            "name":"西安交通大学",
+            "img_src":"../assets/images/大学Logo/西安交通大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'xjtu', '_blank')",
+            "department":"西安交通大学"
+        }
+    ],
+    "university_CSA":[
+        {
+            "name":"北京大学",
+            "img_src":"../assets/images/大学Logo/北京大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'pku', '_blank')",
+            "level":"(A+)"
+        },
+        {
+            "name":"清华大学",
+            "img_src":"../assets/images/大学Logo/清华大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'qhdx', '_blank')",
+            "level":"(A+)"
+        },
+        {
+            "name":"浙江大学",
+            "img_src":"../assets/images/大学Logo/浙江大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'zju', '_blank')",
+            "level":"(A+)"
+        },
+        {
+            "name":"国防科技大学",
+            "img_src":"../assets/images/大学Logo/国防科技大学.jpg",
+            "open_src":"window.open('about_error.html', '_blank')",
+            "level":"(A+)"
+        },
+        {
+            "name":"北京航空航天大学",
+            "img_src":"../assets/images/大学Logo/北京航空航天大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'buaa', '_blank')",
+            "level":"(A)"
+        },
+        {
+            "name":"北京邮电大学",
+            "img_src":"../assets/images/大学Logo/北京邮电大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'bupt', '_blank')",
+            "level":"(A)"
+        },
+        {
+            "name":"哈尔滨工业大学",
+            "img_src":"../assets/images/大学Logo/哈尔滨工业大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'hit', '_blank')",
+            "level":"(A)"
+        },
+        {
+            "name":"上海交通大学",
+            "img_src":"../assets/images/大学Logo/上海交通大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'sjtu', '_blank')",
+            "level":"(A)"
+        },
+        {
+            "name":"南京大学",
+            "img_src":"../assets/images/大学Logo/南京大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'nju', '_blank')",
+            "level":"(A)"
+        },
+        {
+            "name":"华中科技大学",
+            "img_src":"../assets/images/大学Logo/华中科技大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'hust', '_blank')",
+            "level":"(A)"
+        },
+        {
+            "name":"电子科技大学",
+            "img_src":"../assets/images/大学Logo/电子科技大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'uestc', '_blank')",
+            "level":"(A)"
+        },
+        {
+            "name":"北京交通大学",
+            "img_src":"../assets/images/大学Logo/北京交通大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'bjtu', '_blank')",
+            "level":"(A-)"
+        },
+        {
+            "name":"北京理工大学",
+            "img_src":"../assets/images/大学Logo/北京理工大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'bit', '_blank')",
+            "level":"(A-)"
+        },
+        {
+            "name":"东北大学",
+            "img_src":"../assets/images/大学Logo/东北大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'neu', '_blank')",
+            "level":"(A-)"
+        },
+        {
+            "name":"吉林大学",
+            "img_src":"../assets/images/大学Logo/吉林大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'jlu', '_blank')",
+            "level":"(A-)"
+        },
+        {
+            "name":"同济大学",
+            "img_src":"../assets/images/大学Logo/同济大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'tongji', '_blank')",
+            "level":"(A-)"
+        },
+        {
+            "name":"中国科学技术大学",
+            "img_src":"../assets/images/大学Logo/中国科学技术大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'ustc', '_blank')",
+            "level":"(A-)"
+        },
+        {
+            "name":"武汉大学",
+            "img_src":"../assets/images/大学Logo/武汉大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'whu', '_blank')",
+            "level":"(A-)"
+        },
+        {
+            "name":"中南大学",
+            "img_src":"../assets/images/大学Logo/中南大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'csu', '_blank')",
+            "level":"(A-)"
+        },
+        {
+            "name":"西安交通大学",
+            "img_src":"../assets/images/大学Logo/西安交通大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'xjtu', '_blank')",
+            "level":"(A-)"
+        },
+        {
+            "name":"西北工业大学",
+            "img_src":"../assets/images/大学Logo/西北工业大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'nwpu', '_blank')",
+            "level":"(A-)"
+        },
+        {
+            "name":"西安电子科技大学",
+            "img_src":"../assets/images/大学Logo/西安电子科技大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'xidian', '_blank')",
+            "level":"(A-)"
+        }
+    ],
+    "university_SEA":[
+        {
+            "name":"北京航空航天大学",
+            "img_src":"../assets/images/大学Logo/北京航空航天大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'buaa', '_blank')",
+            "level":"(A+)"
+        },
+        {
+            "name":"浙江大学",
+            "img_src":"../assets/images/大学Logo/浙江大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'zju', '_blank')",
+            "level":"(A+)"
+        },
+        {
+            "name":"国防科技大学",
+            "img_src":"../assets/images/大学Logo/国防科技大学.jpg",
+            "open_src":"window.open('about_error.html', '_blank')",
+            "level":"(A+)"
+        },
+        {
+            "name":"北京大学",
+            "img_src":"../assets/images/大学Logo/北京大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'pku', '_blank')",
+            "level":"(A)"
+        },
+        {
+            "name":"清华大学",
+            "img_src":"../assets/images/大学Logo/清华大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'qhdx', '_blank')",
+            "level":"(A)"
+        },
+        {
+            "name":"华东师范大学",
+            "img_src":"../assets/images/大学Logo/华东师范大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'ecnu', '_blank')",
+            "level":"(A)"
+        },
+        {
+            "name":"武汉大学",
+            "img_src":"../assets/images/大学Logo/武汉大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'whu', '_blank')",
+            "level":"(A)"
+        },
+        {
+            "name":"南京大学",
+            "img_src":"../assets/images/大学Logo/南京大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'nju', '_blank')",
+            "level":"(A)"
+        },
+        {
+            "name":"天津大学",
+            "img_src":"../assets/images/大学Logo/天津大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'tju', '_blank')",
+            "level":"(A-)"
+        },
+        {
+            "name":"东北大学",
+            "img_src":"../assets/images/大学Logo/东北大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'neu', '_blank')",
+            "level":"(A-)"
+        },
+        {
+            "name":"哈尔滨工业大学",
+            "img_src":"../assets/images/大学Logo/哈尔滨工业大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'hit', '_blank')",
+            "level":"(A-)"
+        },
+        {
+            "name":"同济大学",
+            "img_src":"../assets/images/大学Logo/同济大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'tongji', '_blank')",
+            "level":"(A-)"
+        },
+        {
+            "name":"上海交通大学",
+            "img_src":"../assets/images/大学Logo/上海交通大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'sjtu', '_blank')",
+            "level":"(A-)"
+        },
+        {
+            "name":"苏州大学",
+            "img_src":"../assets/images/大学Logo/苏州大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'szu', '_blank')",
+            "level":"(A-)"
+        },
+        {
+            "name":"中国科学技术大学",
+            "img_src":"../assets/images/大学Logo/中国科学技术大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'ustc', '_blank')",
+            "level":"(A-)"
+        },
+        {
+            "name":"四川大学",
+            "img_src":"../assets/images/大学Logo/四川大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'scu', '_blank')",
+            "level":"(A-)"
+        }
+    ],
+    "university_985":[
+        {
+            "name":"清华大学",
+            "img_src":"../assets/images/大学Logo/清华大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'qhdx', '_blank')",
+            "department":"清华大学"
+        },
+        {
+            "name":"北京大学",
+            "img_src":"../assets/images/大学Logo/北京大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'pku', '_blank')",
+            "department":"北京大学"
+        },
+        {
+            "name":"北京理工大学",
+            "img_src":"../assets/images/大学Logo/北京理工大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'bit', '_blank')",
+            "department":"北京理工大学"
+        },
+        {
+            "name":"北京航空航天大学",
+            "img_src":"../assets/images/大学Logo/北京航空航天大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'buaa', '_blank')",
+            "department":"北京航空航天大学"
+        },
+        {
+            "name":"北京师范大学",
+            "img_src":"../assets/images/大学Logo/北京师范大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'bnu', '_blank')",
+            "department":"北京师范大学"
+        },
+        {
+            "name":"中国人民大学",
+            "img_src":"../assets/images/大学Logo/中国人民大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'ruc', '_blank')",
+            "department":"中国人民大学"
+        },
+        {
+            "name":"中国农业大学",
+            "img_src":"../assets/images/大学Logo/中国农业大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'cau', '_blank')",
+            "department":"中国农业大学"
+        },
+        {
+            "name":"中央民族大学",
+            "img_src":"../assets/images/大学Logo/中央民族大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'muc', '_blank')",
+            "department":"中央民族大学"
+        },
+        {
+            "name":"天津大学",
+            "img_src":"../assets/images/大学Logo/天津大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'tju', '_blank')",
+            "department":"天津大学"
+        },
+        {
+            "name":"南开大学",
+            "img_src":"../assets/images/大学Logo/南开大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'nku', '_blank')",
+            "department":"南开大学"
+        },
+        {
+            "name":"山东大学",
+            "img_src":"../assets/images/大学Logo/山东大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'sdu', '_blank')",
+            "department":"山东大学"
+        },
+        {
+            "name":"中国海洋大学",
+            "img_src":"../assets/images/大学Logo/中国海洋大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'ouc', '_blank')",
+            "department":"中国海洋大学"
+        },
+        {
+            "name":"浙江大学",
+            "img_src":"../assets/images/大学Logo/浙江大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'zju', '_blank')",
+            "department":"浙江大学"
+        },
+        {
+            "name":"南京大学",
+            "img_src":"../assets/images/大学Logo/南京大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'nju', '_blank')",
+            "department":"南京大学"
+        },
+        {
+            "name":"东南大学",
+            "img_src":"../assets/images/大学Logo/东南大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'seu', '_blank')",
+            "department":"东南大学"
+        },
+        {
+            "name":"上海交通大学",
+            "img_src":"../assets/images/大学Logo/上海交通大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'sjtu', '_blank')",
+            "department":"上海交通大学"
+        },
+        {
+            "name":"复旦大学",
+            "img_src":"../assets/images/大学Logo/复旦大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'fudan', '_blank')",
+            "department":"复旦大学"
+        },
+        {
+            "name":"同济大学",
+            "img_src":"../assets/images/大学Logo/同济大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'tongji', '_blank')",
+            "department":"同济大学"
+        },
+        {
+            "name":"华东师范大学",
+            "img_src":"../assets/images/大学Logo/华东师范大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'ecnu', '_blank')",
+            "department":"华东师范大学"
+        },
+        {
+            "name":"厦门大学",
+            "img_src":"../assets/images/大学Logo/厦门大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'xmu', '_blank')",
+            "department":"厦门大学"
+        },
+        {
+            "name":"中山大学",
+            "img_src":"../assets/images/大学Logo/中山大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'sysu', '_blank')",
+            "department":"中山大学"
+        },
+        {
+            "name":"华南理工大学",
+            "img_src":"../assets/images/大学Logo/华南理工大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'scut', '_blank')",
+            "department":"华南理工大学"
+        },
+        {
+            "name":"中国科学技术大学",
+            "img_src":"../assets/images/大学Logo/中国科学技术大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'ustc', '_blank')",
+            "department":"中国科学技术大学"
+        },
+        {
+            "name":"湖南大学",
+            "img_src":"../assets/images/大学Logo/湖南大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'hnu', '_blank')",
+            "department":"湖南大学"
+        },
+        {
+            "name":"中南大学",
+            "img_src":"../assets/images/大学Logo/中南大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'csu', '_blank')",
+            "department":"中南大学"
+        },
+        {
+            "name":"国防科技大学",
+            "img_src":"../assets/images/大学Logo/国防科技大学.jpg",
+            "open_src":"window.open('about_error.html', '_blank')",
+            "department":"国防科技大学"
+        },
+        {
+            "name":"武汉大学",
+            "img_src":"../assets/images/大学Logo/武汉大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'whu', '_blank')",
+            "department":"武汉大学"
+        },
+        {
+            "name":"华中科技大学",
+            "img_src":"../assets/images/大学Logo/华中科技大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'hust', '_blank')",
+            "department":"华中科技大学"
+        },
+        {
+            "name":"西安交通大学",
+            "img_src":"../assets/images/大学Logo/西安交通大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'xjtu', '_blank')",
+            "department":"西安交通大学"
+        },
+        {
+            "name":"西北工业大学",
+            "img_src":"../assets/images/大学Logo/西北工业大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'nwpu', '_blank')",
+            "department":"西北工业大学"
+        },
+        {
+            "name":"西北农林科技大学",
+            "img_src":"../assets/images/大学Logo/西北农林科技大学.jpg",
+            "open_src":"window.open('about_error.html', '_blank')",
+            "department":"西北农林科技大学"
+        },
+        {
+            "name":"四川大学",
+            "img_src":"../assets/images/大学Logo/四川大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'scu', '_blank')",
+            "department":"四川大学"
+        },
+        {
+            "name":"电子科技大学",
+            "img_src":"../assets/images/大学Logo/电子科技大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'uestc', '_blank')",
+            "department":"电子科技大学"
+        },
+        {
+            "name":"重庆大学",
+            "img_src":"../assets/images/大学Logo/重庆大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'cqu', '_blank')",
+            "department":"重庆大学"
+        },
+        {
+            "name":"东北大学",
+            "img_src":"../assets/images/大学Logo/东北大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'neu', '_blank')",
+            "department":"东北大学"
+        },
+        {
+            "name":"哈尔滨工业大学",
+            "img_src":"../assets/images/大学Logo/哈尔滨工业大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'hit', '_blank')",
+            "department":"哈尔滨工业大学"
+        },
+        {
+            "name":"吉林大学",
+            "img_src":"../assets/images/大学Logo/吉林大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'jlu', '_blank')",
+            "department":"吉林大学"
+        },
+        {
+            "name":"大连理工大学",
+            "img_src":"../assets/images/大学Logo/大连理工大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'dlut', '_blank')",
+            "department":"大连理工大学"
+        },
+        {
+            "name":"兰州大学",
+            "img_src":"../assets/images/大学Logo/兰州大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'lzu', '_blank')",
+            "department":"兰州大学"
+        }
+    ],
+    "university_热门双非":[
+        {
+            "name":"杭州电子科技大学",
+            "img_src":"../assets/images/大学Logo/杭州电子科技大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'hdu', '_blank')",
+            "department":"杭州电子科技大学"
+        },
+        {
+            "name":"浙江工业大学",
+            "img_src":"../assets/images/大学Logo/浙江工业大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'zjut', '_blank')",
+            "department":"浙江工业大学"
+        },
+        {
+            "name":"南京邮电大学",
+            "img_src":"../assets/images/大学Logo/南京邮电大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'njupt', '_blank')",
+            "department":"南京邮电大学"
+        },
+        {
+            "name":"南京信息工程大学",
+            "img_src":"../assets/images/大学Logo/南京信息工程大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'njxxgc', '_blank')",
+            "department":"南京信息工程大学"
+        },
+        {
+            "name":"上海理工大学",
+            "img_src":"../assets/images/大学Logo/上海理工大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'usst', '_blank')",
+            "department":"上海理工大学"
+        },
+        {
+            "name":"上海科技大学",
+            "img_src":"../assets/images/大学Logo/上海科技大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'shkj', '_blank')",
+            "department":"上海科技大学"
+        },
+        {
+            "name":"深圳大学",
+            "img_src":"../assets/images/大学Logo/深圳大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'szu', '_blank')",
+            "department":"深圳大学"
+        },
+        {
+            "name":"广东工业大学",
+            "img_src":"../assets/images/大学Logo/广东工业大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'gdut', '_blank')",
+            "department":"广东工业大学"
+        },
+        {
+            "name":"南方科技大学",
+            "img_src":"../assets/images/大学Logo/南方科技大学.jpg",
+            "open_src":"window.open('Detail.html?name=' + 'nfkj', '_blank')",
+            "department":"南方科技大学"
+        }
+    ]
+}

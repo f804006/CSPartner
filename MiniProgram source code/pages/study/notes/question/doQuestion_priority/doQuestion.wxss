@@ -1,0 +1,8 @@
+.steps-bottom.cu-steps .cu-item .num::before {
+  content: "\e668";
+  font-family: 'iconfont';
+}
+
+page{
+  background-color: white;
+}

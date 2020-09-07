@@ -1,0 +1,54 @@
+user_info:
+_id String
+_openid String
+name: String
+item_id: Array object{itemid ,title} 
+note:
+
+
+item_info:
+_id
+_openid
+title     String
+note     Array
+
+
+note0:
+_id
+_openid
+content
+
+
+memory_info:
+_id
+_openid
+title: String
+content: String
+sign: Array len = 7
+5min 30min 12h 1d 2d 4d 7d 15d
+starttime: String
+
+
+abhs_item:
+_id
+_openid
+achieve bool
+plan Array
+
+
+
+
+QuestionSet_Info
+_id
+_openidd
+content    Question_id
+Question
+loves
+noteId
+title
+
+Question
+_id
+_openid
+title
+answer

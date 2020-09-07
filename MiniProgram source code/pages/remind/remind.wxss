@@ -1,0 +1,107 @@
+/**index.wxss**/
+
+.container {
+ _height:500px;
+}
+.ded {
+  color: #9370DB;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100rpx ;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-size: 100% 80%;
+  -moz-background-size: 100% 100%;
+}
+
+.dd {
+  color: rgb(254, 52, 113);
+  font-family: '粗体';
+  font-size: 88rpx;
+
+}
+
+.mm {
+  font-size: 38rpx;
+  text-align: center;
+}
+
+.cc {
+  color: #02d7ff;
+  font-size: 58rpx;
+  text-align: center;
+  margin-bottom: 16%;
+  margin-top: 20%;
+  flex-direction:column;
+overflow: auto;
+}
+
+.user-motto {
+  font-family: '黑体';
+  font-size: 58rpx;
+  text-align: center;
+  margin-top:10%;
+
+}
+
+.today {
+  font-size: 46rpx;
+  text-align: center;
+  margin-top:10%;
+}
+
+.ded {
+  overflow: auto;
+  _height: 1%;
+}
+
+
+.inspire{
+  margin-top: 100rpx;
+  width: 100%;
+  height: 30rpx;
+  
+  border-bottom: 1px solid rgb(254, 52, 113);
+  background-color: rgb
+ 
+}
+
+.zan{
+  position: absolute;
+  top:90%;
+  left: 80%;
+}
+
+.mini-btn {
+    position: absolute;
+    right: 15px;
+    bottom: 25px;
+}
+
+.love-new {
+    position: fixed;
+    width: 100rpx;
+    height: 100rpx;
+    bottom: 100rpx;
+    right: 30rpx;
+    z-index: 1024;
+    opacity: 0.8;
+    
+    border-radius: 100rpx;
+    
+}
+
+.love-new button {
+    border-radius: 100rpx;
+    border: 0;
+    background-color: transparent;
+    outline: none;
+    color: white;
+}
+
+.margin{
+    margin: 40rpx
+}

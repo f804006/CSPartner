@@ -1,0 +1,18 @@
+<view class="cu-card dynamic {{isCard?'no-card':''}}">
+    <view class="cu-item shadow">
+        <view class="cu-list menu-avatar">
+            <view class="cu-item">
+                <view class="content flex-sub">
+                    <view class="text-gray text-sm flex justify-between">
+                        {{ time }}<text space="ensp">{{newnote_content.length}}字</text>          
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="cu-form-group align-start">       
+            <textarea maxlength="-1" bindinput="gettextarea" value="{{newnote_content}}" style="height:800rpx;" placeholder="记点什么吧~" ></textarea>
+        </view>
+</view>
+</view>
+
+<button class="cu-btn round line{{bordersize?bordersize:''}}-green shadow" style="position: relative; top:20rpx; left:72%; width:150rpx" bindtap="toaddnote">添加</button>

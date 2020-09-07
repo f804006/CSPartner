@@ -1,0 +1,26 @@
+   <cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content">题目详情</view>
+  </cu-custom>
+  <view class="padding-xs flex align-center">
+    <view class="flex-sub ">
+      <view class="solid-bottom text-lg padding">
+        <text class="text-black">{{QuestionInfo.question}}</text>
+      </view>
+      <view class="text-lg padding" wx:if="{{AnwserFlag == true}}">
+        <text class="text-black">{{QuestionInfo.anwser}}</text>
+      </view>
+       <view class="padding solid-bottom" bindtap="AnwserFlagTap" style="color:	#87CEFA">{{ (AnwserFlag == true)?'隐藏':'显示' }}答案</view>
+       <view class="padding text-grey">本道题您在本系统中共遇到{{QuestionInfo.apperCnt}}次，会做{{QuestionInfo.trueCnt}}次</view>
+     
+    </view>
+  </view>
+  <view class="favor">
+     <view class="cuIcon-favorfill" style="font-size:60rpx;color:#FFFF00" bindtap="deleteQuestion" 
+     wx:if="{{QuestionInfo.favor == true}}" bindtap="toCancelFavor"></view>
+    <view class="cuIcon-favor" style="font-size:60rpx;color:grey" bindtap="deleteQuestion" 
+     wx:else bindtap="toFavor"></view>
+  </view>
+  <view class="delete">
+     <view class="cuIcon-deletefill" style="font-size:60rpx;color:red" bindtap="deleteQuestion"></view>
+  </view>

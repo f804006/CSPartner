@@ -1,0 +1,49 @@
+<calendar selected="{{selected}}" bindselect="bindselect" bindgetdate="bindgetdate" />
+
+<view class="cu-bar solid-bottom solid-top" style="background-color:#F0F8FF">
+  <view class="action">
+    <text class="cuIcon-title text-orange"></text> 今日时间分配
+  </view> 
+</view>
+<view wx:if="{{ have == true }}">
+<canvas canvas-id="pieCanvas1" style="width:100%;height:{{autoCanvasHeight}}px;margin-left:{{MarignLeftSize}}px"></canvas>
+
+</view>
+<view wx:else class="padding text-center">今天还没有记录哦，
+  <text style="color:#FFD700;text-decoration:underline" bindtap="mark">开始记录</text>
+</view>
+
+<view class="cu-bar solid-bottom solid-top" style="background-color:#F0F8FF">
+  <view class="action">
+    <text class="cuIcon-title text-orange"></text>近七天时间分配
+  </view> 
+</view>
+<canvas canvas-id="lineCanvas" style="width:1000px;height:{{autoCanvasHeight}}px;marign-top:50rpx;background-color:white"
+ wx:if="{{!radarImg}}"></canvas>
+<image wx:else src="{{radarImg}}" style="width: {{Column1Width}}px; height: 300px;" />
+
+<view class="cu-modal {{modalName=='mark'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">添加记录</view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-red"></text>
+      </view>
+    </view>
+
+    <view class="cu-form-group" wx:for="{{StatisticsArray}}" wx:for-index="idx">
+      <view class="title">任务</view>
+      <input placeholder="十个字符以内" bindblur='getInput' data-index="{{ idx }}" maxlength="10"></input>
+      <view class="title">耗时</view>
+      <picker mode="selector" value="{{  arrayindex[idx]  }}" range="{{ array }}" bindchange="bindTimeChange" data-index="{{ idx }}">
+        <view class="picker">
+          {{array[  arrayindex[idx]  ]}}
+        </view>
+      </picker>
+    </view>
+    <view class="cu-form-group justify-between">
+      <text class="cuIcon-add lg text-green margin-left-200rpx" bindtap="add"></text>
+      <view class="bg-green padding-sm radius" bindtap="submit">提交</view>
+    </view>
+  </view>
+</view>

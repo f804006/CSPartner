@@ -1,0 +1,98 @@
+<scroll-view scroll-y class="DrawerPage {{modalName=='viewModal'?'show':''}}">
+  <cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content">{{title}}</view>
+  </cu-custom>
+  <!-- <view class='margin text-center'>
+    <view class='cu-btn bg-green lg block shadow radius margin-xl' bindtap="showModal" data-target="viewModal">
+      收藏的题目
+    </view>
+  </view> -->
+    <view class="flex solid-bottom padding justify-center">
+      <view class="bg-green padding-sm margin-xs radius" bindtap="showModal" data-target="viewModal">我的收藏</view>
+      <view class="bg-cyan padding-sm margin-xs radius" bindtap="showModal" data-target="doQuestion">做题</view>
+    </view> 
+  <view class='text-center text-sl'>
+    <text bindtap="showModal" data-target="add" class="cuIcon-roundaddfill text-cyan"></text>
+  </view> 
+  <view class="cu-modal {{modalName=='doQuestion'?'show':''}}">
+    <view class="cu-dialog">
+      <view class="cu-bar  justify-end" style="background-color:#F0F8FF">
+        <view class="content">做题</view>
+        <view class="action" bindtap="hideModal">
+          <text class="cuIcon-close text-red"></text>
+        </view>
+      </view>
+    <view class='item'>
+      <view class='name'> 题目数量:</view>
+      <view class='detail'>
+        <input class='input-style-name' placeholder="范围:2-7" type='text' maxlength='1' style="color:grey" bindblur="getQuestionNum"></input>
+      </view>
+    </view>
+      <view class="cu-bar justify-end" style="background-color:#F0F8FF">
+        <!-- <view class="action" style="marign-right:10rpx;">
+          <button class="cu-btn bg-green" bindtap="ToDoQuestion" style="width:150rpx;">随机</button>
+        </view>
+        <view class="action">
+          <button class="cu-btn bg-green" bindtap="ToDoQuestion" style="width:200rpx;">错题优先</button>
+        </view> -->
+            <view class="flex solid-bottom justify-end">
+      <view class="bg-green padding-sm margin-xs radius" bindtap="ToDoQuestion">随机</view>
+      <view class="bg-green padding-sm margin-xs radius"  bindtap="ToDoQuestion_Priority">错题优先</view>
+    </view>
+      </view>
+    </view>
+  </view>
+  <view class="cu-modal {{modalName=='add'?'show':''}}">
+    <view class="cu-dialog">
+      <view class="cu-bar  justify-end" style="background-color:#F0F8FF">
+        <view class="content">添加题目</view>
+        <view class="action" bindtap="hideModal">
+          <text class="cuIcon-close text-red"></text>
+        </view>
+      </view>
+      <view class="cu-form-group align-start">
+        <view class="title">题目</view>
+        <textarea bindinput="InputQuestion" placeholder="请输入题目" wx:if="{{modalName=='add'}}"></textarea>
+      </view>
+      <view style="height:2rpx;background-color:#C0C0C0"></view>
+      <view class="cu-form-group align-start">
+        <view class="title">答案</view>
+        <textarea bindinput="InputAnwser" placeholder="请输入答案" wx:if="{{modalName=='add'}}"></textarea>
+      </view>
+      
+      <view class="cu-bar justify-end" style="background-color:#F0F8FF">
+        <view class="action">
+          <button class="cu-btn bg-green margin-left" bindtap="addQuestion">确定</button>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg">
+    <view class="cu-item arrow" wx:for="{{QuestionList}}" wx:key="index" data-id="{{item._id}}"   bindtap="QuestionDetail">
+      <view class="content">
+        
+        <text class="text-grey">{{item.question}}</text>
+      </view>
+    </view>
+  </view>
+    <view class="padding text-center" wx:if="{{QuestionList.length == 0 }}">
+     快来组建属于你自己的题库吧！
+    </view>
+</scroll-view>
+<view class="DrawerClose {{modalName=='viewModal'?'show':''}}" bindtap="hideModal">
+  <text class="cuIcon-pullright"></text>
+</view>
+<scroll-view class="DrawerWindow {{modalName=='viewModal'?'show':''}}">
+  <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg">
+    <view class="cu-item arrow" wx:for="{{FavorList}}" wx:key="index" data-id="{{item._id}}"   bindtap="QuestionDetail">
+      <view class="content">
+        <text class="cuIcon-likefill text-grey"></text>
+        <text class="text-grey">{{item.question}}</text>
+      </view>
+    </view>
+    <view class="padding text-center" style="color:white;" wx:if="{{FavorList.length == 0 }}">
+     空空如也~
+    </view>
+  </view>
+</scroll-view>

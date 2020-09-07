@@ -1,0 +1,7 @@
+{
+  "navigationBarBackgroundColor": "#F0F8FF",
+  "navigationBarTitleText": "学习统计",
+  "usingComponents": {
+    "calendar": "/components/calendar/calendar"
+  }
+}

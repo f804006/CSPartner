@@ -1,0 +1,39 @@
+<view class="cu-bar bg-white solid-bottom margin-top">
+  <view class="action">
+    <text class="cuIcon-title text-orange"></text> 第{{i+1}}题
+  </view>
+  <view class="action">
+    <button class="cu-btn bg-ghostWhite shadow text-grey" wx:if="{{OverFlag == true}}" style="width:200rpx">已结束答题</button>
+    <button class="cu-btn bg-green shadow" bindtap="overAnswer" wx:elif="{{TapNum == Question.length}}" style="width:200rpx">结束答题</button>
+    
+    <button class="cu-btn bg-ghostWhite shadow text-grey" wx:else style="width:200rpx">做完点这里</button>
+  </view>
+</view>
+<view class="bg-white padding">
+  <view class="cu-steps">
+    <view class="cu-item {{item.name == '已做'?'text-blue':''}} " wx:for="{{numList}}" wx:key
+    bindtap="skip" data-index="{{index}}">
+      <text class="num" data-index="{{index + 1}}"></text> <text class="{{item.name == '正在做'?'text-green':''}}">{{item.name}}</text>
+    </view>
+  </view>
+</view>
+
+
+<view class="padding-xs flex align-center">
+  <view class="flex-sub ">
+    <view class="solid-bottom text-lg padding">
+      <text class="text-black">{{Question[i].question}}</text>
+    </view>
+
+    <view class="padding" wx:if="{{AnwserFlag == true}}">{{Question[i].anwser}}</view>
+<view class="padding" bindtap="AnwserFlagTap" style="color:	#87CEFA">{{ (AnwserFlag == true)?'隐藏':'显示' }}答案</view>
+
+    <view class="flex solid-bottom padding justify-center" wx:if="{{Question[i].flag == null}}">
+      <view class="bg-green padding-sm margin-xs radius" bindtap="can">会</view>
+      <view class="bg-cyan padding-sm margin-xs radius" bindtap="notcan">不会</view>
+    </view> 
+    <view wx:else class="padding">
+    已提交
+    </view>
+  </view>
+</view>
